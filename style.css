@@ -8,7 +8,7 @@ body{
 }
 
 .container{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 
@@ -74,15 +74,12 @@ select:focus{
 }
 
 #box2{
-    margin: 0.6rem 0;
-}
-
-input[type="radio"]{
-    margin:0.6rem 0;
+    margin: 0.2rem 0;
+    gap:0.6rem;
 }
 
 #box3{
-    margin: 0.9rem 0;
+    margin: 0.6rem 0;
 }
 
 #box4{
