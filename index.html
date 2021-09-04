@@ -15,16 +15,16 @@
             <p id="subtitulo">Complete suas informações</p>
         </div>
 
-        <form action="" class="main">
+        <form action="" class="main" onsubmit="Validar()">
             <div id="box1">
                Nome:
-               <input type="text" name="Nome" id="nome">
+               <input type="text" name="Nome" id="nome" placeholder="Digite seu nome">
 
                Email
-               <input type="text" name="Email" id="email">
+               <input type="text" name="Email" id="email" placeholder="Digite um email válido">
 
                Senha:
-               <input type="password" name="Senha" id="senha">
+               <input type="password" name="Senha" id="senha" placeholder="Digite uma senha com 5 caracteres">
             </div>
 
             <div id="box2">
@@ -39,7 +39,7 @@
                     <label>
                     <input type="radio" name="devWeb" value="fullstack">Fullstack
                     </label>  
-            </div>
+             </div>
 
             <div id="box3">
                 <label for="senioridade"><b> Senioridade</b></label>
@@ -57,7 +57,7 @@
                 </textarea>
             </div>
 
-            <button class="botao" type="submit" id="btn-concluido" onclick="return Validar()" >Concluido</button>
+            <input type="submit" value="Enviar" id="btn-enviar">
         </form>
      </section>
 

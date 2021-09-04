@@ -21,7 +21,7 @@ const Validar = () =>{
      senha.focus();
      return false;
   } 
-
-
+ 
+ return true;
 }
 
