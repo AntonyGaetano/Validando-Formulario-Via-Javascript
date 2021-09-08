@@ -25,3 +25,33 @@ const Validar = () =>{
  return true;
 }
 
+
+var cont = 1;
+
+function Slide(){
+  
+  var imagens = [];
+
+  for(let i = 1; i < 6; i++){
+   imagens.push("./imgs/foto"+[i]+".svg"); 
+  }
+
+  if(cont == 7){
+    cont == 1;
+  }
+
+  var Div = document.getElementById("ilustracao");
+  Div.style.backgroundImage="url("+imagens[cont]+")"
+    
+   cont++;
+}
+
+
+const ChamaFuncao = () =>{
+
+  const tempo = setInterval(Slide,4000);
+}
+
+window.addEventListener("load",ChamaFuncao)
+
+
