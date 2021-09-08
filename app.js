@@ -28,20 +28,22 @@ const Validar = () =>{
 
 var cont = 1;
 
+var imagens = [];
+
+for(let i = 1; i < 6; i++){
+ imagens.push("./imgs/foto"+[i]+".svg"); 
+}
+
 function Slide(){
-  
-  var imagens = [];
 
-  for(let i = 1; i < 6; i++){
-   imagens.push("./imgs/foto"+[i]+".svg"); 
-  }
 
-  if(cont == 7){
-    cont == 1;
+  if(cont == 5){
+    cont = 0;
   }
 
   var Div = document.getElementById("ilustracao");
   Div.style.backgroundImage="url("+imagens[cont]+")"
+  console.log(cont)
     
    cont++;
 }
