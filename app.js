@@ -10,18 +10,17 @@ const Validar = () =>{
 
   if(nome == ""){
       nome_invalido.innerHTML="Olá";
+      document.getElementById('nome').focus();
       return false;
   }
 
   else if(email == "" || email.indexOf('@') == -1){
-    (email == "" ? alert("Campo do email vazio") : alert("O email informado não é válido"))
-    email.focus();
+    document.getElementById('email').focus();
     return false;
   } 
 
   else if(senha == "" || senha.length < 5){
-     (senha == "" ? alert("Campo da senha vazio") : alert("Senha com numero insuficiente"))
-     senha.focus();
+     document.getElementById('senha').focus();
      return false;
   } 
  
