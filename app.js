@@ -9,18 +9,26 @@ const Validar = () =>{
   senha = document.getElementById('senha').value;
 
   if(nome == ""){
-      nome_invalido.innerHTML="Olá";
+      nome_invalido.innerHTML="Campo em branco";
       document.getElementById('nome').focus();
+      email_invalido.innerHTML="";
+      senha_invalida.innerHTML="";
       return false;
   }
 
   else if(email == "" || email.indexOf('@') == -1){
+    email_invalido.innerHTML="Email inválido";
     document.getElementById('email').focus();
+    nome_invalido.innerHTML="";
+    senha_invalida.innerHTML="";
     return false;
   } 
 
   else if(senha == "" || senha.length < 5){
+    senha_invalida.innerHTML="Senha inválida";
      document.getElementById('senha').focus();
+     nome_invalido.innerHTML="";
+     email_invalido.innerHTML="";
      return false;
   } 
  
