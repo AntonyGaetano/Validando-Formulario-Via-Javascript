@@ -1,3 +1,7 @@
+var nome_invalido = document.getElementById('p_nome');
+var email_invalido = document.getElementById('p_email');
+var senha_invalida = document.getElementById('p_senha');
+
 
 const Validar = () =>{
   nome = document.getElementById('nome').value;
@@ -5,12 +9,11 @@ const Validar = () =>{
   senha = document.getElementById('senha').value;
 
   if(nome == ""){
-      alert("Campo do nome vazio");
-      nome.focus();
+      nome_invalido.innerHTML="Olá";
       return false;
   }
 
-  else if(email == "" || email.indexOf('@') == 1){
+  else if(email == "" || email.indexOf('@') == -1){
     (email == "" ? alert("Campo do email vazio") : alert("O email informado não é válido"))
     email.focus();
     return false;
@@ -49,8 +52,7 @@ function Slide(){
 }
 
 
-const ChamaFuncao = () =>{
-
+const ChamaFuncao = () =>{;
   const tempo = setInterval(Slide,4000);
 }
 

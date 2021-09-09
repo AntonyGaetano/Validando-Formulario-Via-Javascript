@@ -15,16 +15,20 @@
             <p id="subtitulo">Complete suas informações</p>
         </div>
 
-        <form action="" class="main" onsubmit="Validar()">
+        <form method="#" action="#" class="main" onsubmit=" return Validar()">  
             <div id="box1">
-               Nome:
+              <label >Nome:</label> 
                <input type="text" name="Nome" id="nome" placeholder="Digite seu nome">
+               <p id="p_nome"></p>
 
-               Email
+               <label >Email:</label>
                <input type="text" name="Email" id="email" placeholder="Digite um email válido">
+               <p id="p_email"></p>
 
-               Senha:
+               <label >Senha:</label>
                <input type="password" name="Senha" id="senha" placeholder="Digite uma senha válida">
+               <p id="p_senha"></p>
+
             </div>
 
             <div id="box2">
@@ -43,7 +47,7 @@
 
             <div id="box3">
                 <label for="senioridade"><b> Senioridade</b></label>
-                 <select id="senioridade" required>
+                 <select id="senioridade" >
                 <option selected disabled value="">Selecione...</option>
                  <option>Junior</option>
                  <option>Pleno</option>
@@ -63,3 +67,5 @@
      <script src="/app.js"></script>
 </body>
 </html>
+
+
