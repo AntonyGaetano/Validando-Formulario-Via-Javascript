@@ -13,6 +13,7 @@ const Valicacao=()=>{
   senha = document.getElementById('senha').value;
 
   if(nome==""||email ==""||email.indexOf('@')==-1||senha==""||senha.length<5){
+    
     if(nome=="" && (email ==""||email.indexOf('@')==-1) && (senha==""||senha.length<5)){
       nome_invalido.innerHTML="Campo em branco";
       email_invalido.innerHTML="Email inválido";
@@ -25,7 +26,7 @@ const Valicacao=()=>{
       return false;
     }
 
-    else if(nome==""||email==""||email.indexOf('@')==-1){
+    else if((nome==""||email==""||email.indexOf('@')==-1)&&(senha!=""||senha.length>=5)){
       senha_invalida.innerHTML="";
       i_senha.innerHTML="";
 
