@@ -7,7 +7,7 @@ var i_email = document.getElementById("error-email");
 var i_senha = document.getElementById("error-password");
 
 
-const Valicacao=()=>{
+const Validacao=()=>{
   nome = document.getElementById('nome').value;
   email = document.getElementById('email').value;
   senha = document.getElementById('senha').value;
@@ -15,13 +15,14 @@ const Valicacao=()=>{
   if(nome==""||email ==""||email.indexOf('@')==-1||senha==""||senha.length<5){
     
     if(nome=="" && (email ==""||email.indexOf('@')==-1) && (senha==""||senha.length<5)){
-      nome_invalido.innerHTML="Campo em branco";
+     /* nome_invalido.innerHTML="Campo em branco";
       email_invalido.innerHTML="Email inválido";
       senha_invalida.innerHTML="Senha inválida";
   
       i_nome.innerHTML="error_outline";
       i_email.innerHTML="error_outline";
-      i_senha.innerHTML="error_outline";
+      i_senha.innerHTML="error_outline"; */
+      alert("todos invalidos")
 
       return false;
     }
@@ -31,33 +32,65 @@ const Valicacao=()=>{
       i_senha.innerHTML="";
 
       if(nome==""&&(email==""||email.indexOf('@')==-1)){
-        nome_invalido.innerHTML="Campo em branco";
+       /* nome_invalido.innerHTML="Campo em branco";
         email_invalido.innerHTML="Email inválido";
 
         i_nome.innerHTML="error_outline";
-        i_email.innerHTML="error_outline";
+        i_email.innerHTML="error_outline"; */
+        alert("Nome e email invalido")
       }
       else if(nome==""){
-        nome_invalido.innerHTML="Campo em branco";
+      /*  nome_invalido.innerHTML="Campo em branco";
         i_nome.innerHTML="error_outline";
 
         email_invalido.innerHTML="";
-        i_email.innerHTML="";
+        i_email.innerHTML=""; */
+        alert("apenas o nome invalido")
       }
       else{
-        i_email.innerHTML="error_outline";
+      /*  i_email.innerHTML="error_outline";
         email_invalido.innerHTML="Email inválido";
 
         i_nome.innerHTML="";
-        nome_invalido.innerHTML="";
+        nome_invalido.innerHTML=""; */
+        alert("Apenas o email invalido")
       }
 
       return false;
     }
 
-    else if(nome==""||senha==""||senha.length<5){
+    else if((nome==""||senha==""||senha.length<5) && (email!=""||email.indexOf('@')!=-1)){
+      email_invalida.innerHTML="";
+      i_email.innerHTML="";
 
+      if(nome=="" && (senha==""||senha.length<5)){
+       /* nome_invalido.innerHTML="Campo em branco";
+        email_invalido.innerHTML="Email inválido";
+
+        i_nome.innerHTML="error_outline";
+        i_email.innerHTML="error_outline"; */
+        alert("Nome e senha inválida")
+      }
+      else if(nome==""){
+      /*  nome_invalido.innerHTML="Campo em branco";
+        i_nome.innerHTML="error_outline";
+
+        email_invalido.innerHTML="";
+        i_email.innerHTML=""; */
+        alert("apenas o nome invalido")
+      }
+      else{
+      /*  i_email.innerHTML="error_outline";
+        email_invalido.innerHTML="Email inválido";
+
+        i_nome.innerHTML="";
+        nome_invalido.innerHTML=""; */
+        alert("Apenas a senha invalida")
+      }
+
+      return false;
     }
+
 
     return true
   }
