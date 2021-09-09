@@ -8,7 +8,13 @@ const Validar = () =>{
   email = document.getElementById('email').value;
   senha = document.getElementById('senha').value;
 
-  if(nome == ""){
+  if(nome == "" && email == "" && senha == ""){
+    nome_invalido.innerHTML="Campo em branco";
+    email_invalido.innerHTML="Email inválido";
+    senha_invalida.innerHTML="Senha inválida";
+  }
+
+  else if(nome == ""){
       nome_invalido.innerHTML="Campo em branco";
       document.getElementById('nome').focus();
       email_invalido.innerHTML="";

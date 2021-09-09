@@ -108,4 +108,5 @@ padding: 0.6rem 1.5rem;
 
 #p_nome,#p_email,#p_senha{
     color:red;
+    font-size: 14px;
 }
