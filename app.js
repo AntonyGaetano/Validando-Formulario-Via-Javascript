@@ -59,7 +59,7 @@ const Validacao=()=>{
       return false;
     }
 
-    else if((nome==""||senha==""||senha.length<5) && (email!=""||email.indexOf('@')!=-1)){
+    else if((nome==""||senha==""||senha.length<5) && (email!=""||email.indexOf('@')==0)){
       email_invalida.innerHTML="";
       i_email.innerHTML="";
 
