@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
     <link rel="stylesheet" href="style.css">
     <title>Validando Formulário</title>
 </head>
@@ -17,17 +18,33 @@
 
         <form method="#" action="#" class="main" onsubmit=" return Validar()">  
             <div id="box1">
-              <label >Nome:</label> 
-               <input type="text" name="Nome" id="nome" placeholder="Digite seu nome">
-               <p id="p_nome"></p>
 
-               <label >Email:</label>
-               <input type="text" name="Email" id="email" placeholder="Digite um email válido">
-               <p id="p_email"></p>
 
-               <label >Senha:</label>
-               <input type="password" name="Senha" id="senha" placeholder="Digite uma senha válida">
-               <p id="p_senha"></p>
+              <label >Nome:</label>
+
+              <div class="input-and-i">
+                <input type="text" name="Nome" id="nome" placeholder="Digite seu nome">
+                <i id="error-nome" class="material-icons"></i>
+              </div> 
+              <p id="p_nome"></p>
+
+
+              <label >Email:</label>
+
+              <div class="input-and-i">
+                 <input type="text" name="Email" id="email" placeholder="Digite um email válido">
+                 <i id="error-email" class="material-icons"></i>
+              </div>
+              <p id="p_email"></p>
+
+
+              <label >Senha:</label>
+
+              <div class="input-and-i">
+                 <input type="password" name="Senha" id="senha" placeholder="Digite uma senha válida">
+                 <i id="error-password" class="material-icons"></i>
+              </div>  
+              <p id="p_senha"></p>
 
             </div>
 

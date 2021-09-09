@@ -106,7 +106,12 @@ padding: 0.6rem 1.5rem;
   transition: 2s ;
 }
 
-#p_nome,#p_email,#p_senha{
+#p_nome,#p_email,#p_senha, i{
     color:red;
     font-size: 14px;
+}
+
+.input-and-i{
+    display: flex;
+    align-items: center;
 }
