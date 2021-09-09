@@ -7,13 +7,14 @@ var i_email = document.getElementById("error-email");
 var i_senha = document.getElementById("error-password");
 
 
+
 //Função para valicação do formulário
 const Validar = () =>{
   nome = document.getElementById('nome').value;
   email = document.getElementById('email').value;
   senha = document.getElementById('senha').value;
 
-  if(nome == "" && email == "" && senha == ""){
+  if(nome == "" &&(email == "" || email.indexOf('@') == -1) && (senha == "" || senha.length < 5)){
     nome_invalido.innerHTML="Campo em branco";
     email_invalido.innerHTML="Email inválido";
     senha_invalida.innerHTML="Senha inválida";
@@ -21,6 +22,8 @@ const Validar = () =>{
     i_nome.innerHTML="error_outline";
     i_email.innerHTML="error_outline";
     i_senha.innerHTML="error_outline";
+
+    return false;
   }
 
   else if(nome == ""){
