@@ -24,7 +24,39 @@ const Valicacao=()=>{
 
       return false;
     }
-    else if(nome==""||email ==""||email.indexOf('@')==-1)
+
+    else if(nome==""||email==""||email.indexOf('@')==-1){
+      senha_invalida.innerHTML="";
+      i_senha.innerHTML="";
+
+      if(nome==""&&(email==""||email.indexOf('@')==-1)){
+        nome_invalido.innerHTML="Campo em branco";
+        email_invalido.innerHTML="Email inválido";
+
+        i_nome.innerHTML="error_outline";
+        i_email.innerHTML="error_outline";
+      }
+      else if(nome==""){
+        nome_invalido.innerHTML="Campo em branco";
+        i_nome.innerHTML="error_outline";
+
+        email_invalido.innerHTML="";
+        i_email.innerHTML="";
+      }
+      else{
+        i_email.innerHTML="error_outline";
+        email_invalido.innerHTML="Email inválido";
+
+        i_nome.innerHTML="";
+        nome_invalido.innerHTML="";
+      }
+
+      return false;
+    }
+
+    else if(nome==""||senha==""||senha.length<5){
+
+    }
 
     return true
   }
