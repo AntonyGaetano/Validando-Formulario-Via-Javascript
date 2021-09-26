@@ -88,7 +88,6 @@ function Slide(){
 
   var Div = document.getElementById("ilustracao");
   Div.style.backgroundImage="url("+imagens[cont]+")"
-  console.log(cont)
     
    cont++;
 }

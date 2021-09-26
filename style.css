@@ -1,7 +1,7 @@
 *{padding:0; margin:0; box-sizing: border-box;}
 
 body{
-    background-color:coral;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0, 4, 255));
     font-family: sans-serif;
     font-size: 1em;
     color: #3226F7;
@@ -114,4 +114,55 @@ padding: 0.6rem 1.5rem;
 .input-and-i{
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width:950px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 4, 255));
+        gap:2rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .container1{
+        margin-top: 1rem;
+    }
+
+    .container2{
+        width: 100%;
+        height: 350px;
+    }
+
+    .container2 > div{
+        width: 24rem;
+        height: 20rem;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:430px){
+
+    body{
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(0, 4, 255));
+        gap:4rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .container2{
+        width: 100%;
+        height: 250px;
+    }
+
+    .container2 > div{
+        width: 15rem;
+        height: 10rem;
+        margin: auto;
+    }
 }
