@@ -7,12 +7,12 @@
 ## Veja:
 
 
-### Loyout para notebook e desktop
+### Layout para notebook e desktop
 
 <img src="gif/api_form_telanot.gif">
 
 
-### Loyout para celulares e tablets
+### Layout para celulares e tablets
 <img src="gif/api_form_telacll.gif">
 
 🚀Tecnologias usadas:
